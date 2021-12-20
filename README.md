@@ -11,7 +11,7 @@
 
 Si vous êtes bon, à la fin de ce workshop vous pourrez faire drifter votre voiture sur un terrain de course.
 
-![](/https://github.com/tomasit/ForzaWorkshop/Screenshot from 2021-12-20 11-18-42.png)
+![](https://github.com/tomasit/ForzaWorkshop/blob/main/Screenshot%20from%202021-12-20%2011-18-42.png?raw=true)
 
 ## Unity Basics
 
