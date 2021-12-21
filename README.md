@@ -61,11 +61,12 @@ Et avancer plus vite, ou au contraire avec un malus et ralentir, etc. (libre à 
  - Créez un nouvel objet Power up.<br/>Dans cet objet mettez un **Box Collider**. /!\ (Attention les voitures devront pouvoir passer a travers ces bonus.)<br/>
  - Ensuite avec un script dans ce même objet Power up, trouvez un moyen de savoir quand la voiture est passée à travers et ajoutez lui de la vitesse (et un effet de nitro pourquoi pas).
 
+PS: allez voir dans Workshop2/PowerUp pour les assets de powerUp.
 
 ### Step 3
 
-Un bon game designer est sensé faire en sorte que le joueur ai une bonne experience de jeu. La plus immersive possible. Cela passe en premier par ce que le joueur vois a l'écran.<br/>
-un moyen simple d'améliorer cette experience utilisateur est la mise en place de caméras.<br/>
+Un bon game designer est censé faire en sorte que le joueur ai une bonne experience de jeu. La plus immersive possible. Cela passe en premier par ce que le joueur voit a l'écran.<br/>
+Un moyen simple d'améliorer cette experience utilisateur est la mise en place de caméras.<br/>
 
 ![](https://github.com/tomasit/ForzaWorkshop/blob/main/Screenshot%20from%202021-12-21%2013-37-15.png)
 
@@ -78,7 +79,6 @@ Si vous voulez aller plus loin :
 ## Bonus Game design
 
  - Sound design (Boutons UI, voitures, collisions de celle ci...)
- - Mise en places de boost sur une course
  - Avoir le choix de selectionner la voiture que l'on veut avec la course que l'on veut
  
 ## Bonus physiques de la voiture ++
@@ -87,9 +87,4 @@ N'hésitez pas à modifier les paramètres de votre voiture :<br/>
 - Pour qu'elle aille de plus en plus vite<br/>
 - Qu'elle patine plus sur le sol<br/>
 - Qu'elle freine lorsque l'accélerateur n'est plus pressé...
-
-Ou encore :
-
-- Bruit de la voiture.
-- Différentes vues de caméras
 
