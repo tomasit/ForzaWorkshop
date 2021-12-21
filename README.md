@@ -5,64 +5,84 @@
  - Installez Unity Hub https://unity.com/download#how-get-started
  - Créez vous un compte, et prennez une license gratuite.
  - Installez en local la dernière version LTS de 2020
- - Créez un nouveau projet 3D
+ - Prennez le basic_game.zip au root du repo, décompressez le
+ - Ajoutez un nouoveau projet avec comme dossier le basic_game/
 
 ## Overview
 
-Si vous êtes bon, à la fin de ce workshop vous pourrez faire drifter votre voiture sur un terrain de course.
-
-![](https://github.com/tomasit/ForzaWorkshop/blob/main/Screenshot%20from%202021-12-20%2011-18-42.png?raw=true)
+Si vous êtes bon, à la fin de ce workshop vous pourrez avoir un jeu complet et detaillé, entre systemes de sauvegardes, interfaces graphiques & sound design.
 
 ## Unity Basics
 
 Ecoutez nous là c'est important si vous n'avez jamais touché à Unity.
 
-## Step 1
-
-Le but de cette étape est d'avoir toute la physique de la voiture mise en place.
-Utilisez un de nos asset de voiture. L'intégrer a une nouvelle scène vide. 
-Ajoutez les composants ci dessous a cet objet :
- - Box collider
- - Wheel collider (x4)
- - RigidBody
-
-Faites bien attention à ce que les wheel collider soit bien configurer.
-
-## Step 2
-
-A la fin de cette étape, votre voiture pourra aller en ligne droite.
+## UI (Menu + UI in game)
 
 
-Vous allez devoir créer un Script, l'intégrer à votre voiture.<br/>
-Vous devez trouver un moyen d'accéder aux quatres roues de la voiture depuis votre script.<br/>
-Ensuite, utilisez les composants mis dans le step 1 pour faire avancer la voiture.
+![](../Pictures/Screenshot from 2021-12-21 11-59-06.png)
 
-Si vous avez des questions : https://docs.unity3d.com/Manual/index.html <br/>
-Ou en dernier recours demander à Thomas Itel.
+### Step 1
 
-## Step 3
+A la fin de cette étape vous devrez afficher différents menu.<br/>
+Depuis une nouvelle scène "Menu" créez une interface graphique à l'aide des objets UI de Unity :
+    
+ - Canvas (Pour contenir tout vos objets de type UI)
+ - Bouttons
+ - Text
+ - Images
 
-Allez à gauche et à droite.
-Une fois de plus, vous devez modifier les paramètres des composants physiques de votre voiture.
+Vous pouvez proposer à l'utilisateur :
 
-Faites en sorte de lier les inputs de votre clavier à la direction que prend votre voiture (AMG classe 5 model A).
+ - Différentes voitures
+ - Différentes courses
 
-## Step 4
+### Step 2
 
-Normalement ici votre voiture peut se déplacer dans toutes les directions. Mais drift t-elle ?
+Maintenant que vous avez une interface graphique fonctionnelle vous pouvez ajouter un décors a votre menu.<br/>
+Vous avez un asset de garage si vous voulez. <br/>
+Vous pouvez aussi afficher les voitures selectionées par l'utilisateur.
+etc...
 
-Dans vos wheelCollider vous avez de nombreux paramètres : 
- - La friction
- - Les suspensions
- - La masse
- - ...
 
-Faites en sorte que votre voiture ne fasse pas de tonneaux et soit stable même a une grande vitesse.<br/>
-Pour cela vous devrez configurer des barres de stabilisation.
+## Level design et power up
 
-Si vous ne savez pas ce que c'est : https://youtu.be/N1EF-7-Wcvk
+### Step 1
 
-## Bonus
+Nous vouez avons donné un ensemble de circuits.<br/> Et un .zip avec une voiture a l'interieur.
+<br/> Vous pouvez créer une scène avec l'une d'elle.<br/>
+Faites ensuite en sorte que la voiture ne puisse jamais sortir de la course.
+Pour ça vous aurez besoins de **BoxCollider(s)** pour délimiter les limites de la course.
+
+![](../Pictures/Screenshot from 2021-12-21 13-37-15.png)
+
+### Step 2
+
+A la fin de cette partie vous pourrez prendre des power up avec votre voiture et avancer plus vite, ou au contraire avec un malus et ralentir, etc.
+
+ - Créez un nouvel objet Power up.<br/>Dans cet objet mettez un **Box Collider**. /!\ (Attention les voitures devront pouvoir passer a travers ces bonus.)<br/>
+ - Ensuite avec un script dans ce même objet Power up, trouvez un moyen de savoir quand la voiture est passée à travers et ajoutez lui de la vitesse (et un effet de nitro pourquoi pas).
+
+
+### Step 3
+
+Un bon game designer est sensé faire en sorte que le joueur ai une bonne experience de jeu. La plus immersive possible. Cela passe en premier par ce que le joueur vois a l'écran.<br/>
+un moyen simple d'améliorer cette experience utilisateur est la mise en place de caméras.<br/>
+
+![](../Pictures/Screenshot from 2021-12-21 13-34-37.png)
+
+Dans cette étapes ajoutez un script *CameraController* à la base de votre voiture.<br/>
+ - Faites en sorte que lorsque la touche *C* du clavier est préssée l'angle de la caméra change.<br/>
+ 
+Si vous voulez aller plus loin :
+ - Faites en sorte que lorsque la voiture recule la caméra nous montre l'avant de la voiture.
+ 
+## Bonus Game design
+
+ - Sound design (Boutons UI, voitures, collisions de celle ci...)
+ - Mise en places de boost sur une course
+ - Avoir le choix de selectionner la voiture que l'on veut avec la course que l'on veut
+ 
+## Bonus physiques de la voiture ++
 
 N'hésitez pas à modifier les paramètres de votre voiture :<br/>
 - Pour qu'elle aille de plus en plus vite<br/>
@@ -71,11 +91,6 @@ N'hésitez pas à modifier les paramètres de votre voiture :<br/>
 
 Ou encore :
 
-- Animations des roues.
 - Bruit de la voiture.
 - Différentes vues de caméras
 
-
-### PS : ça pourrait vous être utile
-
-https://docs.unity3d.com/Manual/class-WheelCollider.html
