@@ -26,6 +26,12 @@ public class carController : MonoBehaviour
     [Header("Speed")]
     public float actualSpeed;
 
+    public AudioSource audioSound;
+    private int [] gearSpeed;
+    private float CurrentSpeed = 0.0f;
+    private int currentGear = 0;
+
+
     public void Start()
     {
         GetComponent<Rigidbody>().centerOfMass += new Vector3(0, 0, 1.0f);
@@ -61,8 +67,6 @@ public class carController : MonoBehaviour
         bool firstWheels = false;
         float rotationX = 0f;
         float rotationY = 0f;
-
-        //GearSound();
      
         foreach (AxleInfo axleInfo in axleInfos) 
         {
@@ -79,34 +83,4 @@ public class carController : MonoBehaviour
         }
         actualSpeed = motor;
     }
-
-
-    public AudioSource audioSound;
-    private int [] gearSpeed;
-    private float CurrentSpeed = 0.0f;
-    private int currentGear = 0;
-/*
-    //souond
-    public void GearSound()
-    {
-        float tempoMinSpeed = 0.00f;
-        float tempoMaxSpeed = 0.00f;
-        float currentPitch = 0.00f;
-        
-        switch (currentGear)
-        {
-                case 0:
-                    tempoMinSpeed = 0.00f;
-                    tempoMaxSpeed = gearSpeed[currentGear];
-                    break;
-        
-                default:
-                    tempoMinSpeed = gearSpeed[currentGear -1];  
-                    break;
-                tempoMaxSpeed = gearSpeed[currentGear];
-        }
-        currentPitch = ((Mathf.Abs(CurrentSpeed) - tempoMinSpeed)/(tempoMaxSpeed - tempoMinSpeed)) + 0.8f;
-            audioSound.pitch = currentPitch;
-    }
-*/
 }
