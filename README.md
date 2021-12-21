@@ -19,7 +19,7 @@ Ecoutez nous là c'est important si vous n'avez jamais touché à Unity.
 ## UI (Menu + UI in game)
 
 
-![](https://github.com/tomasit/ForzaWorkshop/Screenshot from 2021-12-21 11-59-06.png)
+![](https://github.com/tomasit/ForzaWorkshop/blob/main/Screenshot%20from%202021-12-21%2011-59-06.png)
 
 ### Step 1
 
@@ -53,7 +53,7 @@ Nous vouez avons donné un ensemble de circuits.<br/> Et un .zip avec une voitur
 Faites ensuite en sorte que la voiture ne puisse jamais sortir de la course.
 Pour ça vous aurez besoins de **BoxCollider(s)** pour délimiter les limites de la course.
 
-![](https://github.com/tomasit/ForzaWorkshop/Screenshot from 2021-12-21 13-37-15.png)
+![](https://github.com/tomasit/ForzaWorkshop/blob/main/Screenshot%20from%202021-12-21%2013-34-37.png)
 
 ### Step 2
 
@@ -68,7 +68,7 @@ A la fin de cette partie vous pourrez prendre des power up avec votre voiture et
 Un bon game designer est sensé faire en sorte que le joueur ai une bonne experience de jeu. La plus immersive possible. Cela passe en premier par ce que le joueur vois a l'écran.<br/>
 un moyen simple d'améliorer cette experience utilisateur est la mise en place de caméras.<br/>
 
-![](https://github.com/tomasit/ForzaWorkshop/Screenshot from 2021-12-21 13-34-37.png)
+![](https://github.com/tomasit/ForzaWorkshop/blob/main/Screenshot%20from%202021-12-21%2013-37-15.png)
 
 Dans cette étapes ajoutez un script *CameraController* à la base de votre voiture.<br/>
  - Faites en sorte que lorsque la touche *C* du clavier est préssée l'angle de la caméra change.<br/>
